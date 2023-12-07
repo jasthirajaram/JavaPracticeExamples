@@ -1,0 +1,67 @@
+package com.motivity;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.motivity.Entity.Student;
+
+/**
+ * Hello world!
+ *
+ */
+public class App {
+	public void create() {
+		Student std = new Student(1, "Rajaram", "Java");
+		Configuration config = new Configuration().configure("hibernate.xml").addAnnotatedClass(Student.class);
+		SessionFactory sessionFactory = config.buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		Transaction transaction = session.beginTransaction();
+		session.save(std);
+		transaction.commit();
+		sessionFactory.close();
+	}
+
+	public void update() {
+		Student std = new Student(1, "Abhilash", "Java");
+
+		Configuration config = new Configuration().configure("hibernate.xml").addAnnotatedClass(Student.class);
+		SessionFactory sessionFactory = config.buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		Transaction transaction = session.beginTransaction();
+		std.setCourse("Java");
+		;
+		session.update(std);
+		transaction.commit();
+		sessionFactory.close();
+	}
+
+	public void delete() {
+		Student std = null;
+		Configuration config = new Configuration().configure("hibernate.xml").addAnnotatedClass(Student.class);
+		SessionFactory sessionFactory = config.buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		Transaction transaction = session.beginTransaction();
+		session.delete(std);
+		transaction.commit();
+		sessionFactory.close();
+	}
+	
+	public void getData() {
+		Student std = null;
+		Configuration config = new Configuration().configure("hibernate.xml").addAnnotatedClass(Student.class);
+		SessionFactory sessionFactory = config.buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		std = session.get(Student.class, 1);
+		System.out.println(std);
+	}
+	public static void main(String[] args) {
+		App app = new App();
+		// app.create();
+		//app.update();
+		// app.delete();
+		app.getData();
+	}
+
+}

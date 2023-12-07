@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping>
+	<class name="com.motivity.jpaxml.entity.JavaBatch" table="JavaBatch">
+	<id name="ceoID" column="ceoID">
+		<generator class="assigned"></generator>
+	</id>
+	<property name="ceoName"></property>
+	<property name="ceoDept"></property>
+	<one-to-one name="javaBatch" class="com.motivity.jpaxml.entity.JavaBatch" cascade="save-update"></one-to-one>
+	</class>
+</hibernate-mapping>

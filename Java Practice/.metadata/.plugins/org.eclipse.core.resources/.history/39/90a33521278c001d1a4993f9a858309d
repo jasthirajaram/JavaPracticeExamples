@@ -1,0 +1,29 @@
+package com.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class ConnectionExample {
+	public static void main(String[] args) {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost", "root", "Cherry$9821");
+			System.out.println("Connection established");
+			Statement stat = connection.createStatement();
+			String databaseQuery = "create database motivity";
+			stat.execute(databaseQuery);
+			stat.close();
+			connection.close();
+			
+		}
+		catch(ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,14 @@
+package com.billing.service;
+
+import java.util.List;
+
+import com.billing.entity.Aws;
+
+public interface AwsService {
+
+	public List<Aws> getBillingDetailsForDuration(int months);
+	
+	public Long getCountOfData();
+	
+	public List<Aws> getBillingByStartDate(String startDate);
+}

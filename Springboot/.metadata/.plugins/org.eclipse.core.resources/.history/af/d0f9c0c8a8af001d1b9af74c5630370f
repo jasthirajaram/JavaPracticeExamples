@@ -1,0 +1,23 @@
+package com.phones.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.phones.exceptions.EnterFullSpecificatiponException;
+import com.phones.model.Phones;
+import com.phones.repository.PhoneRepository;
+
+@Service
+public class PhoneServiceImpl implements PhoneService {
+
+	@Autowired
+	PhoneRepository phoneRepository;
+
+	@Override
+	public List<Phones> getAllPhones() {
+		return phoneRepository.findAll();
+	}
+	
+}

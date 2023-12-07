@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=SpringORM/C:\/Users\/Raja Ram\/.m2\/repository\/org\/hibernate\/hibernate-core\/5.6.1.Final\/hibernate-core-5.6.1.Final.jar=/maven.pomderived=/true=/=/maven.groupId=/org.hibernate=/=/maven.artifactId=/hibernate-core=/=/maven.version=/5.6.1.Final=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.hibernate.dialect(MySQLDialect.class[MySQLDialect" modifiers="33" timestamp="1673355565559"/>
+    <typeInfo handle="=SpringJDBC/C:\/Users\/Raja Ram\/.m2\/repository\/org\/springframework\/spring-jdbc\/6.0.3\/spring-jdbc-6.0.3.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework=/=/maven.artifactId=/spring-jdbc=/=/maven.version=/6.0.3=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.jdbc.datasource(DriverManagerDataSource.class[DriverManagerDataSource" modifiers="33" timestamp="1674710885953"/>
+    <typeInfo handle="=SpringMVC/D:\/Spring Framework\/SpringMVC\/src\/main\/webapp\/WEB-INF\/lib\/spring-webmvc-6.0.3.jar&lt;org.springframework.web.servlet(DispatcherServlet.class[DispatcherServlet" modifiers="33" timestamp="1675014026154"/>
+    <typeInfo handle="=SpringMVC/D:\/Spring Framework\/SpringMVC\/src\/main\/webapp\/WEB-INF\/lib\/spring-webmvc-6.0.3.jar&lt;org.springframework.web.servlet.view(InternalResourceViewResolver.class[InternalResourceViewResolver" modifiers="33" timestamp="1675014026154"/>
+</typeInfoHistroy>

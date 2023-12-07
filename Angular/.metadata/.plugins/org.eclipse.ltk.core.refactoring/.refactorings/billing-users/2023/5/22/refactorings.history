@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.example.service.UserInfoUserService&apos; to &apos;UserInfoUserDetailsService&apos;&#x0D;&#x0A;- Original project: &apos;springboot-angular&apos;&#x0D;&#x0A;- Original element: &apos;com.example.service.UserInfoUserService&apos;&#x0D;&#x0A;- Renamed element: &apos;com.example.service.UserInfoUserDetailsService&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;UserInfoUserService&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.service{UserInfoUserService.java[UserInfoUserService" matchStrategy="1" name="UserInfoUserDetailsService" qualified="false" references="true" similarDeclarations="false" stamp="1685356365584" textual="false" version="1.0"/>
+</session>

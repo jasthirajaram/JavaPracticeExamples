@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="tyre1" class="com.spring.dependency.Tyres">
+		<property name="name" value="MRF">
+		</property>
+
+		<property name="place" value="India">
+		</property>
+
+	</bean>
+
+	<bean id="fortunerBean" class="com.spring.dependency.Fortuner">
+		<constructor-arg name="company" value="Toyata">
+		</constructor-arg>
+
+		<constructor-arg name="cost" value="3500000.46">
+		</constructor-arg>
+
+	</bean>
+
+	<bean id="tyre2" class="com.spring.dependency.Tyres">
+		<property name="name" value="Ceat">
+		</property>
+
+		<property name="place" value="India">
+		</property>
+
+	</bean>
+
+	<bean id="InjectwithSetter" class="com.spring.dependency.Vehicle">
+		<property name="fortuner" ref="fortunerBean">
+		</property>
+
+		<property name="tyre" ref="tyre1">
+		</property>
+
+	</bean>
+
+	<bean id="InjectwithConstructor"
+		class="com.spring.dependency.Vehicle">
+		<constructor-arg name="fortuner" ref="fortunerBean">
+		</constructor-arg>
+
+		<constructor-arg name="tyre" ref="tyre2">
+		</constructor-arg>
+
+	</bean>
+</beans>

@@ -1,0 +1,44 @@
+package com.crud.serviceimpl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.crud.model.Books;
+import com.crud.repository.BookRepository;
+import com.crud.service.BookService;
+@Service
+public class BooksServiceImpl implements BookService{
+
+	@Autowired(required = true)
+	BookRepository bookRepository;
+	@Override
+	public Books saveBooks(Books books) {
+		// TODO Auto-generated method stub
+		return bookRepository.save(books);
+	}
+
+	@Override
+	public Books getAllBooks(Books books) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Books updateBooks(Books books) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Books deleteBooks(Books books) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean findByName(String bookName) {
+		// TODO Auto-generated method stub
+		return bookRepository.ge
+	}
+
+}

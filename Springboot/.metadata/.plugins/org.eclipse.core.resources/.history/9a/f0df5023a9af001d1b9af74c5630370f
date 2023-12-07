@@ -1,0 +1,21 @@
+package com.phones.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.phones.model.Phones;
+import com.phones.repository.PhoneRepository;
+
+public class PhoneServiceImpl implements PhoneService {
+
+	@Autowired
+	PhoneRepository phoneRepository;
+	
+	@Override
+	public List<Phones> getAllPhones() {
+		// TODO Auto-generated method stub
+		return phoneRepository.findAll();
+	}
+
+}

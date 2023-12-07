@@ -1,0 +1,19 @@
+package com.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+
+import com.mysql.cj.protocol.Resultset;
+import com.mysql.cj.xdevapi.Result;
+
+public class ConnectionExample {
+	public static void main(String[] args) {
+		try {
+			Class.forName("com.mysql,jdbc.Driver");
+			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306", "root", "Cherry$9821");
+			Statement stat = connection.createStatement();
+			Resultset rs = stat.executeQuery("create database motivity");
+		
+	}
+}

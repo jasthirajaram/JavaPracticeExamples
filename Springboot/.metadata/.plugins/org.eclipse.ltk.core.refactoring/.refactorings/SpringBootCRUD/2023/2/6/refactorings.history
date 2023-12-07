@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Books.java&apos; to &apos;RestTemplateExample/src/main/java/com.resttemplate.model&apos;&#x0D;&#x0A;- Original project: &apos;SpringBootCRUD&apos;&#x0D;&#x0A;- Destination element: &apos;RestTemplateExample/src/main/java/com.resttemplate.model&apos;&#x0D;&#x0A;- Original element: &apos;com.crud.model.Books.java&apos;" description="Copy compilation unit" destination="=RestTemplateExample/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.resttemplate.model" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.crud.model{Books.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1676025147812" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,7 @@
+package com.phones.service;
+
+import com.phones.model.Phones;
+
+public interface PhoneService {
+	Phones savePhone(Phones phone);
+}

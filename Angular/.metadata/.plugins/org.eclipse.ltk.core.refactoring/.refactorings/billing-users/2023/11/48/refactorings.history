@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;springboot-angular&apos;&#x0D;&#x0A;- Original project: &apos;springboot-angular&apos;&#x0D;&#x0A;- Original element: &apos;springboot-angular/src/main/java/com.example.mapper&apos;" description="Delete element" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.mapper" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1701150742728" subPackages="false" version="1.0"/>
+</session>

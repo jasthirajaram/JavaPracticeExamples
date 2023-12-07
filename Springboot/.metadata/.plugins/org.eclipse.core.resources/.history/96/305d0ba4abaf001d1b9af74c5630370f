@@ -1,0 +1,33 @@
+package com.phones.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.phones.model.Phones;
+import com.phones.service.PhoneService;
+
+@RestController
+@RequestMapping("/phones")
+public class PhoneController {
+
+	@Autowired
+	PhoneService phoneService;
+
+	@PostMapping("/save")
+	public ResponseEntity<Phones> savePhone(@RequestBody Phones phone) {
+		return new ResponseEntity<Phones>(phoneService.savePhone(phone), HttpStatus.OK);
+	}
+	
+	@GetMapping("/getll")
+	public ResponseEntity<List<Phones>> getAllPhones() {
+		return new ResponseEntity<List<Phones>>(phoneService.getAllPhones(), HttpStatus.OK);
+	}
+}

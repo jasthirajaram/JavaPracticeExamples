@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="D:\ecommerce-website\02-backend\springboot-ecommerce\springboot-ecommerce"/>
+			<item value="D:\Angular\backendtraining"/>
+			<item value="C:\Users\Raja Ram\Desktop\Angular Examples\spring-boot3-jwt"/>
+			<item value="C:\Users\Raja Ram\Downloads\AuthorizationService\AuthorizationService"/>
+			<item value="C:\Users\Raja Ram\Downloads\API-Gateway\API-Gateway"/>
+			<item value="C:\Users\Raja Ram\Downloads\Eureka-Server (1)\Eureka-Server"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

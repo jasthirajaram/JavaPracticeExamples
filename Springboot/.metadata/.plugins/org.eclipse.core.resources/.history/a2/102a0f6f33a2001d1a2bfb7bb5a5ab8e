@@ -1,0 +1,10 @@
+package com.crud.service;
+
+import com.crud.model.Books;
+
+public interface BookService {
+	Books saveBooks(Books books);
+	Books getAllBooks(Books books);
+	Books updateBooks(Books books);
+	Books deleteBooks(Books books);
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Filters.java&apos; to &apos;SpringBootCRUD/src/main/java/com.crud.filter&apos;&#x0D;&#x0A;- Original project: &apos;FilterAndSearchOperations&apos;&#x0D;&#x0A;- Destination element: &apos;SpringBootCRUD/src/main/java/com.crud.filter&apos;&#x0D;&#x0A;- Original element: &apos;com.motivity.utility.Filters.java&apos;" description="Copy compilation unit" destination="=SpringBootCRUD/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.crud.filter" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.motivity.utility{Filters.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1676574147434" units="1" version="1.0"/>
+</session>

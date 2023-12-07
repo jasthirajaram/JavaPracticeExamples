@@ -1,0 +1,46 @@
+package com.motivity.test;
+
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.motivity.model.Student;
+import com.motivity.utils.HibernateUtils;
+
+public class StudentTest {
+	
+	public void saveStudent() {
+		
+		Student s=new Student();
+		
+		s.setSid(1);
+		s.setRollno(1014);
+		s.setSname("Karan");
+		
+	Session session =  HibernateUtils.getSession();
+	         session.save(s);
+	 Transaction transaction = session.beginTransaction();
+	 transaction.commit();
+	}
+	public void update()
+	{
+		Student s =new Student();
+		s.set
+		
+		Configuration cc=new Configuration().configure("hibernate.xml").addAnnotatedClass(Student.class);
+		SessionFactory factory=cc.buildSessionFactory();
+		Session s =factory.openSession();
+		Transaction t=s.beginTransaction();
+	    std.setCourse("java");;
+		s.update(std);
+		t.commit();
+		factory.close();
+	}
+	public static void main(String[] args) {
+		StudentTest st=new StudentTest();
+		        st.saveStudent();
+	}
+
+}

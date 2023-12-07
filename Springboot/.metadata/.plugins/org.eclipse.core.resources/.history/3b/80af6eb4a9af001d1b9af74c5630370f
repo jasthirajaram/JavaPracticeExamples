@@ -1,0 +1,13 @@
+package com.phones;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class GetAllPhonesApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(GetAllPhonesApplication.class, args);
+	}
+
+}

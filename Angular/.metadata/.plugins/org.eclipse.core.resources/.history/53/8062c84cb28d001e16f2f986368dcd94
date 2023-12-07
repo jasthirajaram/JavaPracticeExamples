@@ -1,0 +1,38 @@
+package com.example.mapper;
+
+import com.example.dto.UserDto;
+import com.example.entity.User;
+
+public class UserMapper {
+    //User JPA Entity into UserDto
+    public static UserDto mapToUserDto(User user) {
+        UserDto userDto = new UserDto(
+                user.getId(),
+                user.getFirstName(),
+                user.getLastName(),
+                user.getUserName(),
+                user.getEmail(),
+//                user.getRole(),
+                user.getPassword(),
+                user.getRoles(),
+                user.isActive()
+        );
+        return userDto;
+    }
+
+    //Convert UserDto into User JPA Entity
+    public static User mapToUser(UserDto userDto) {
+        User user = new User(
+                userDto.getId(),
+                userDto.getFirstName(),
+                userDto.getLastName(),
+                userDto.getUserName(),
+                userDto.getEmail(),
+//                userDto.getRole(),
+                userDto.getPassword(),
+                userDto.getRoles(),
+                userDto.isActive()
+        );
+        return user;
+    }
+}

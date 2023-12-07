@@ -1,0 +1,81 @@
+package com.example.service;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.dto.UserDto;
+import com.example.entity.User;
+import com.example.exception.ResourceNotFoundException;
+import com.example.mapper.UserMapper;
+import com.example.repository.UserRepository;
+
+@Service
+public class UserServiceImpl implements UserService {
+	@Autowired
+    private UserRepository userRepository;
+	
+	@Autowired
+    private ModelMapper modelMapper;
+	
+    @Override
+    public UserDto createUser(UserDto userDto) {
+        //Convert UserDto into User JPA Entity
+        //User user = UserMapper.mapToUser(userDto);
+        User user = modelMapper.map(userDto, User.class);
+        user.setActive(true);
+        User saveduser = userRepository.save(user);
+        //Convert User JPA Entity to UserDto
+        //UserDto savedUserDto = UserMapper.mapToUserDto(saveduser);
+        UserDto savedUserDto = modelMapper.map(saveduser, UserDto.class);
+        return savedUserDto;
+    }
+    
+    @Override
+    public List<UserDto> getAllUsers() {
+    	User users1 = new User();
+    	if(users1.isActive()==true) {
+        List<User> users = userRepository.findAll();
+    	}
+        //return users.stream().map(UserMapper::mapToUserDto)
+        //          .collect(Collectors.toList());
+        return users.stream().map(user -> modelMapper.map(user, UserDto.class))
+                .collect(Collectors.toList());
+    }
+
+	@Override
+	public UserDto getUserById(Long userId) {
+//		Optional<User> optionalUser = userRepository.findById(userId);
+//        User user = optionalUser.get();
+//        //return UserMapper.mapToUserDto(user);
+//        return modelMapper.map(user, UserDto.class);
+		User user = userRepository.findById(userId)
+				.orElseThrow(() -> new ResourceNotFoundException("Employee not exist by id "+userId));
+		UserDto dtoUser = UserMapper.mapToUserDto(user);
+		return dtoUser;
+	}
+	
+	 @Override
+	    public UserDto updateUser(UserDto user) {
+	        User existingUser = userRepository.findById(user.getId())
+	        		.orElseThrow(() -> new ResourceNotFoundException("Employee not exist by id "+user.getId()));
+	        existingUser.setFirstName(user.getFirstName());
+	        existingUser.setLastName(user.getLastName());
+	        existingUser.setEmail(user.getEmail());
+	        User updatedUser = userRepository.save(existingUser);
+	        //return UserMapper.mapToUserDto(updatedUser);
+	        return modelMapper.map(updatedUser, UserDto.class);
+	    }
+	
+	@Override
+    public void deleteUser(Long userId) {
+		UserDto userDto = this.getUserById(userId);
+		userDto.setActive(false);
+		User user = UserMapper.mapToUser(userDto);
+		userRepository.save(user);
+    }
+}

@@ -1,0 +1,89 @@
+package com.crud.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.crud.model.Books;
+import com.crud.service.BooksService;
+
+@RestController
+@RequestMapping("/books")
+public class BookController {
+
+	@Autowired
+	BooksService booksService;
+
+	@PostMapping("/save")
+	// Insert method
+	public ResponseEntity<Books> save(@RequestBody Books books) {
+		Books book = booksService.saveBooks(books);
+		return new ResponseEntity<Books>(book, HttpStatus.OK);
+	}
+
+	@RequestMapping(value = "/getall", method = RequestMethod.GET)
+	public ResponseEntity<List<Books>> getAll(@RequestParam Integer pageNo, @RequestParam Integer pageSize, @RequestParam String sortBy){
+	//(@RequestParam(defaultValue = "0") Integer pageNo,
+//            @RequestParam(defaultValue = "10") Integer pageSize,
+//            @RequestParam(defaultValue = "bookId") String sortBy) {
+		List<Books> b = booksService.getAllBooks(pageNo, pageSize, sortBy);
+		return new ResponseEntity<List<Books>>(b, HttpStatus.OK);
+	}
+
+	// Update data
+	@RequestMapping(value = "/update", method = RequestMethod.PUT)
+	public ResponseEntity<Books> update(@RequestBody Books books) {
+		Books book = booksService.updateBooks(books);
+		return new ResponseEntity<Books>(book, HttpStatus.OK);
+	}
+
+	// Get by name methods
+	@RequestMapping(value = "/getbyname/{bookName}", method = RequestMethod.GET)
+	public ResponseEntity<List<Books>> getBybookName(@PathVariable String bookName) {
+		List<Books> findBybookName = booksService.findBybookName(bookName);
+		return new ResponseEntity<List<Books>>(findBybookName, HttpStatus.OK);
+	}
+
+	@RequestMapping(value = "/getbyname/{bookId}", method = RequestMethod.GET)
+	public ResponseEntity<Books> getBybookId(@PathVariable int bookId) {
+		Books book = booksService.getById(bookId);
+		return new ResponseEntity<Books>(book, HttpStatus.OK);
+	}
+
+	// Delete by Id
+	@RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
+	public ResponseEntity<String> deleteById(@PathVariable int id) {
+		booksService.deleteBooks(id);
+		return new ResponseEntity<String>("Deleted successfully", HttpStatus.OK);
+	}
+
+	@GetMapping("/byname")
+	public ResponseEntity<Boolean> existsby(@RequestParam String name) {
+		Boolean ss = booksService.existsBybookName(name);
+		return new ResponseEntity<Boolean>(ss, HttpStatus.OK);
+	}
+
+	@GetMapping("/filter")
+	public ResponseEntity<List<Books>> filterDataOnBookName(@RequestParam String filter,
+			@RequestParam String bookName) {
+		List<Books> list = booksService.filterData(filter, bookName);
+		return new ResponseEntity<List<Books>>(list, HttpStatus.OK);
+	}
+	
+	@GetMapping("/searching")
+	public ResponseEntity<List<Books>> SearchBook(@RequestParam String input) {
+		List<Books> list = booksService.searchingBook(input);
+		return new ResponseEntity<List<Books>>(list, HttpStatus.OK);
+	}
+}

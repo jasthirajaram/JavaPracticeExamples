@@ -1,0 +1,19 @@
+server:
+  port: 9090
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: savePhoneModule
+        uri: http://localhost:8082/
+        predicates:
+        - Path=/sphones/**
+      - id: deletePhoneModule
+        uri: http://localhost:8084/
+        predicates:
+        - Path=/dphones/**
+      - id: getPhoneModule
+        uri: http://localhost:8083/
+        predicates:
+        - Path=/gphones/**

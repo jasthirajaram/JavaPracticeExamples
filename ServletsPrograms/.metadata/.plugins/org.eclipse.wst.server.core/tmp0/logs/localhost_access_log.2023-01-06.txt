@@ -1,0 +1,13 @@
+127.0.0.1 - - [06/Jan/2023:14:04:47 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [06/Jan/2023:14:04:48 +0530] "GET /java_Employee_Servlet/Employee.html HTTP/1.1" 200 254
+0:0:0:0:0:0:0:1 - - [06/Jan/2023:14:04:48 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [06/Jan/2023:14:04:55 +0530] "GET /java_Employee_Servlet/employee?name=Rajaram&eid=1088&salary=25000 HTTP/1.1" 200 24
+127.0.0.1 - - [06/Jan/2023:16:49:47 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [06/Jan/2023:16:49:48 +0530] "GET /Employee_Data/Emp.jsp HTTP/1.1" 200 681
+0:0:0:0:0:0:0:1 - - [06/Jan/2023:16:51:15 +0530] "GET /Employee_Data/Emp.jsp HTTP/1.1" 200 693
+0:0:0:0:0:0:0:1 - - [06/Jan/2023:16:53:09 +0530] "GET /Employee_Data/Emp.jsp HTTP/1.1" 200 712
+0:0:0:0:0:0:0:1 - - [06/Jan/2023:16:53:47 +0530] "GET /Employee_Data/Emp.jsp HTTP/1.1" 200 743
+0:0:0:0:0:0:0:1 - - [06/Jan/2023:16:53:50 +0530] "GET /Employee_Data/Emp.jsp HTTP/1.1" 200 743
+0:0:0:0:0:0:0:1 - - [06/Jan/2023:16:53:50 +0530] "GET /Employee_Data/Emp.jsp HTTP/1.1" 200 743
+0:0:0:0:0:0:0:1 - - [06/Jan/2023:16:53:51 +0530] "GET /Employee_Data/Emp.jsp HTTP/1.1" 200 743
+0:0:0:0:0:0:0:1 - - [06/Jan/2023:16:53:51 +0530] "GET /Employee_Data/Emp.jsp HTTP/1.1" 200 743

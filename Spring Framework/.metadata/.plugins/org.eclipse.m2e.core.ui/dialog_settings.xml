@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="D:\Spring Framework"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="internal"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.spring.mvc.MVCProject"/>
+			<item value="com.spring.mvc"/>
+			<item value="com.spring.orm"/>
+			<item value="com.spring.aop.SpringAOPExample"/>
+			<item value="com.spring.aop"/>
+			<item value="com.spring.jdbc"/>
+			<item value="com.spring.dependency"/>
+		</list>
+		<list key="groupId">
+			<item value="com.spring.mvc"/>
+			<item value="com.spring.orm"/>
+			<item value="com.spring.aop"/>
+			<item value="com.spring.jdbc"/>
+			<item value="com.spring.dependency"/>
+		</list>
+		<list key="artifactId">
+			<item value="MVCProject"/>
+			<item value="SpringMVCExample"/>
+			<item value="SpringMVC"/>
+			<item value="SpringORM"/>
+			<item value="SpringAOPExample"/>
+			<item value="SpringAOP"/>
+			<item value="SpringJDBC"/>
+			<item value="DependencyInjections"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="D:\Spring Framework\MVCExample"/>
+			<item value="C:\Users\Raja Ram\Downloads\springMVC\MVCExample"/>
+			<item value="C:\Users\Raja Ram\Downloads\SpringMVC\SpringMVC"/>
+			<item value="C:\Users\Raja Ram\Downloads\SpringAOPExample\SpringAOPExample"/>
+			<item value="C:\Users\Raja Ram\Downloads\SpringApplication\SpringApplication"/>
+			<item value="D:\Spring Framework\DependencyInjections\src\main\resources\spring.xml"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenCheckoutLocationPage">
+		<list key="scmUrl">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

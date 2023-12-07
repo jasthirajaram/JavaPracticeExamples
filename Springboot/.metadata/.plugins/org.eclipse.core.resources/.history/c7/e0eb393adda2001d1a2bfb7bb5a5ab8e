@@ -1,0 +1,13 @@
+package com.crud.service;
+
+import java.util.List;
+
+import com.crud.model.Books;
+
+public interface BookService {
+	Books saveBooks(Books books);
+	List<Books> getAllBooks();
+	Books updateBooks(Books books);
+	Books deleteBooks(Books books); 
+	List<Books> findBybookName(String bookName);
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;EmployeeService.java&apos; to &apos;springboot-crud-operations/src/main/java/com.crud.service&apos;&#x0D;&#x0A;- Original project: &apos;springboot-crud-operations&apos;&#x0D;&#x0A;- Destination element: &apos;springboot-crud-operations/src/main/java/com.crud.service&apos;&#x0D;&#x0A;- Original element: &apos;com.crud.controller.EmployeeService.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.crud.service" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.crud.controller{EmployeeService.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1697710505937" units="1" version="1.0"/>
+</session>
